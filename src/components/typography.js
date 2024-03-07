@@ -5,10 +5,7 @@ import {
 } from "next/font/google";
 import styled from "styled-components";
 
-const merienda = Merienda({
-  subsets: ["latin"],
-  weight: "300",
-});
+
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -20,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const Header = styled.h2.attrs((props) => ({
-  className: props.$block ? playfair.className : merienda.className,
+  className: playfair.className,
 }))`
   text-align: ${(props) => props.center || "left"};
   font-weight: ${(props) => props.weight || "300"};

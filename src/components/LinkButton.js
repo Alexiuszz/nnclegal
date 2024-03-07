@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import styled from "styled-components";
-import CustomCursorContext from "./CustomCursor/context/CustomCursorContext";
 import { centerContent } from "@/styles/style_mixins";
 
 const LinkButtonContainer = styled(motion.a)`
@@ -60,11 +59,8 @@ function LinkButton({
   target,
   onClick = () => {},
 }) {
-  const { setType } = useContext(CustomCursorContext);
   return (
     <LinkButtonContainer
-      onMouseEnter={() => setType("link")}
-      onMouseLeave={() => setType("default")}
       href={href}
       className={className}
       onClick={onClick}

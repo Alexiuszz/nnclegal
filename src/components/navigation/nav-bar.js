@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import { NavBarContainer } from "./nav-bar.styles";
 import { animate } from "framer-motion";
 import {
-  faBed,
-  faBookJournalWhills,
+  faContactCard,
   faEnvelope,
-  faGifts,
   faHandshake,
   faHome,
   faImages,
   faInfo,
-  faMartiniGlassCitrus,
   faNewspaper,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CustomLink from "../CustomLink";
@@ -19,7 +17,6 @@ import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import LinkButton from "../LinkButton";
 import Hamburger from "../Hamburger";
-import { Header } from "../typography";
 
 function NavBar() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -82,33 +79,44 @@ function NavBar() {
     >
       <CustomLink className="logo" href="/">
         <Image
-          height={60}
-          width={64.5}
+          height={80}
+          width={86.5}
           loading="eager"
           src={Logo}
           alt="logo"
           priority
         />
-        <Header>THE PEARL JABI LAKE</Header>
       </CustomLink>
       <div className="unsplash">
-        <CustomLink className="navLinks" href="rooms">
+        <CustomLink className="navLinks" href="/">
           <span className="navIndex">
-            <FontAwesomeIcon icon={faBed} />
+            <FontAwesomeIcon icon={faHome} />
           </span>
-          <span>Rooms</span>
+          <span>Home</span>
         </CustomLink>
-        <CustomLink className="navLinks" href="events">
+        <CustomLink className="navLinks" href="about-us">
+          <span className="navIndex">
+            <FontAwesomeIcon icon={faQuestionCircle} />
+          </span>
+          <span>About Us</span>
+        </CustomLink>
+        <CustomLink className="navLinks" href="people">
+          <span className="navIndex">
+            <FontAwesomeIcon icon={faContactCard} />
+          </span>
+          <span>Our Team</span>
+        </CustomLink>
+        <CustomLink className="navLinks" href="expertise">
           <span className="navIndex">
             <FontAwesomeIcon icon={faHandshake} />
           </span>
-          <span>Events</span>
+          <span>Expertise</span>
         </CustomLink>
-        <CustomLink className="navLinks" href="dining">
+        <CustomLink className="navLinks" href="gallery">
           <span className="navIndex">
-            <FontAwesomeIcon icon={faMartiniGlassCitrus} />
+            <FontAwesomeIcon icon={faImages} />
           </span>
-          <span>Restaurant and Bar</span>
+          <span>Gallery</span>
         </CustomLink>
         <CustomLink className="navLinks" href="contact">
           <span className="navIndex">
@@ -116,9 +124,6 @@ function NavBar() {
           </span>
           <span>Contact us</span>
         </CustomLink>
-        <LinkButton className="navLinks navBtn" href={"reservations"}>
-          Book
-        </LinkButton>
       </div>
       <Hamburger
         opened={openNav}
@@ -128,91 +133,41 @@ function NavBar() {
       />
       <div className="navDrop">
         <div className="mobile-links">
-          <CustomLink className="navLinks" href="rooms">
+          <CustomLink className="navLinks" href="/">
             <span className="navIndex">
-              <FontAwesomeIcon icon={faBed} />
+              <FontAwesomeIcon icon={faHome} />
             </span>
-            <span className="nav-text">Rooms</span>
+            <span>Home</span>
           </CustomLink>
-          <CustomLink className="navLinks" href="events">
+          <CustomLink className="navLinks" href="about-us">
+            <span className="navIndex">
+              <FontAwesomeIcon icon={faQuestionCircle} />
+            </span>
+            <span>About Us</span>
+          </CustomLink>
+          <CustomLink className="navLinks" href="people">
+            <span className="navIndex">
+              <FontAwesomeIcon icon={faContactCard} />
+            </span>
+            <span>Our Team</span>
+          </CustomLink>
+          <CustomLink className="navLinks" href="expertise">
             <span className="navIndex">
               <FontAwesomeIcon icon={faHandshake} />
             </span>
-            <span className="nav-text">Events</span>
+            <span>Expertise</span>
           </CustomLink>
-          <CustomLink className="navLinks" href="dining">
-            <span className="navIndex">
-              <FontAwesomeIcon icon={faMartiniGlassCitrus} />
-            </span>
-            <span className="nav-text">Restaurant and Bar</span>
-          </CustomLink>
-          <CustomLink className="navLinks" href="/gallery">
+          <CustomLink className="navLinks" href="gallery">
             <span className="navIndex">
               <FontAwesomeIcon icon={faImages} />
             </span>
-            <span className="nav-text">Gallery</span>
-          </CustomLink>
-          <CustomLink className="navLinks" href="/offers">
-            <span className="navIndex">
-              <FontAwesomeIcon icon={faGifts} />
-            </span>
-            <span className="nav-text">Special Offers</span>
-          </CustomLink>
-          <CustomLink className="navLinks" href="/news">
-            <span className="navIndex">
-              <FontAwesomeIcon icon={faNewspaper} />
-            </span>
-            <span className="nav-text">
-              News and Upcomming Events
-            </span>
-          </CustomLink>
-          <CustomLink className="navLinks" href="/">
-            <span className="navIndex">
-              <FontAwesomeIcon icon={faBookJournalWhills} />
-            </span>
-            <span className="nav-text">Blog</span>
-          </CustomLink>
-          <CustomLink className="navLinks" href="/about">
-            <span className="navIndex">
-              <FontAwesomeIcon icon={faInfo} />
-            </span>
-            <span className="nav-text">About us</span>
+            <span>Gallery</span>
           </CustomLink>
           <CustomLink className="navLinks" href="contact">
             <span className="navIndex">
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
-            <span className="nav-text">Contact us</span>
-          </CustomLink>
-          <LinkButton
-            className="navLinks navBtn"
-            href={"reservations"}
-          >
-            Book
-          </LinkButton>
-        </div>
-        <div className="navDrop-links">
-          <CustomLink href="/">
-            <FontAwesomeIcon icon={faHome} /> Home
-          </CustomLink>
-          <CustomLink href="/about">
-            <FontAwesomeIcon icon={faInfo} /> About us
-          </CustomLink>
-          <CustomLink href="/gallery">
-            <FontAwesomeIcon icon={faImages} /> Gallery
-          </CustomLink>
-          <CustomLink href="/offers">
-            <FontAwesomeIcon icon={faGifts} /> Special Offers
-          </CustomLink>
-          <CustomLink href="/news">
-            <FontAwesomeIcon icon={faNewspaper} /> News and Upcomming
-            Events
-          </CustomLink>
-          <CustomLink href="/">
-            <FontAwesomeIcon icon={faBookJournalWhills} /> Blog
-          </CustomLink>
-          <CustomLink href="/contact">
-            <FontAwesomeIcon icon={faEnvelope} /> Contact Us
+            <span>Contact us</span>
           </CustomLink>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import CustomCursorManager from "@/components/CustomCursor/context/manager";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
@@ -12,9 +11,9 @@ export default function App({ Component, pageProps }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CustomCursorManager>
+      <main>
         <Component {...pageProps} />
-      </CustomCursorManager>
+      </main>
     </>
   );
 }

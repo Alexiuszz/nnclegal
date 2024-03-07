@@ -10,7 +10,7 @@ const HamburgerContainer = styled.div`
   width: 30px;
   position: absolute;
   right: 5vw;
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 960px) {
     display: flex;
   }
   div {

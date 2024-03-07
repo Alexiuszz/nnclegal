@@ -25,7 +25,7 @@ export const Button = styled.button.attrs((props) => ({
   border-image: repeating-linear-gradient(
       135deg,
       #596576 0 50px,
-      #eaca12 0 100px,
+      #fcfcfc 0 100px,
       #758399 0 150px
     )
     2;

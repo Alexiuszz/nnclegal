@@ -1,5 +1,3 @@
-import { point2 } from "@/styles/keyframes";
-import { centerContent } from "@/styles/style_mixins";
 import styled from "styled-components";
 
 export const NavBarContainer = styled.div`
@@ -25,47 +23,7 @@ export const NavBarContainer = styled.div`
     !$isTop ? "blur(10px)" : "none"};
   box-shadow: ${({ $isTop, menu }) =>
     !$isTop && !menu ? "0px 0px 14px 0px #073018" : "none"};
-  &::after {
-    content: "";
-    height: 40px;
-    width: 25px;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    clip-path: polygon(
-      50% 0,
-      100% 50%,
-      50% 100%,
-      50% 95%,
-      95% 50%,
-      50% 5%
-    );
-  }
-  &::before,
-  &::after {
-    animation: ${point2} 1.5s ease-out infinite;
-    background-color: #becbe7f9;
-    box-shadow: 0px 2px 12px #00000094;
-    position: absolute;
-  }
-  &::before {
-    content: "";
-    height: 30px;
-    width: 15px;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    clip-path: polygon(
-      50% 0,
-      100% 50%,
-      50% 100%,
-      50% 95%,
-      95% 50%,
-      50% 5%
-    );
-    animation-delay: 0.5s;
-  }
+
   &:hover {
     box-shadow: none;
     &::before,
@@ -86,7 +44,6 @@ export const NavBarContainer = styled.div`
     }
     &:hover .navIndex {
       transition: all 0.3s;
-      margin-right: 7px;
     }
   }
   .navBtn {
@@ -121,68 +78,18 @@ export const NavBarContainer = styled.div`
     img {
       object-fit: contain;
     }
-    h2 {
-      font-size: 10px;
-      &:before {
-        content: "";
-        background: ${({ theme }) => theme.accents};
-        display: block;
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 0;
-        height: 1.5px;
-        transition: all 0.3s ease-in-out;
-      }
-      
-    }
-    &:hover h2::before {
-        width: 100%;
-      }
-  }
-  &:hover .navDrop {
-    height: 80px;
-    opacity: 1;
-    font-size: 14px;
   }
 
   .navDrop {
+    top: 100%;
+    left: 0;
+    position: absolute;
     .mobile-links {
       display: none;
     }
-    ${centerContent};
-    position: absolute;
-    background: ${({ $isTop }) =>
-      $isTop
-        ? "#0912313e"
-        : "linear-gradient(180deg,#000000b2,transparent)"};
-    color: ${({ theme }) => theme.primaryColor};
-    backdrop-filter: ${({ $isTop }) =>
-      !$isTop ? "blur(10px)" : "none"};
-    box-shadow: ${({ $isTop, menu }) =>
-      !$isTop && !menu ? "0px 0px 14px 0px #073018" : "none"};
-    top: 100%;
-    left: 0;
-    font-size: 4px;
-    height: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all cubic-bezier(0.66, 0.01, 0.06, 1.06) 0.5s;
-    display: flex;
-    a {
-      margin-right: 30px;
-      svg {
-        height: 12px;
-        margin-right: 2px;
-        color: ${({ theme }) => theme.accents};
-      }
-    }
-    &:hover {
-      background-color: ${({ theme }) => theme.primaryColor};
-    }
   }
 
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 960px) {
     background-color: ${({ theme }) => theme.primaryColor};
     &::after,
     &::before,
@@ -252,6 +159,7 @@ export const NavBarContainer = styled.div`
       transform: translateX(-100%);
       justify-content: start;
       align-items: start;
+      display: flex;
       flex-direction: column;
       padding: ${(props) => (props.$openNav ? "30px 20px" : "0")};
       padding-bottom: ${(props) => (props.$openNav ? "120px" : "0")};

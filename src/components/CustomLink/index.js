@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import CustomCursorContext from "../CustomCursor/context/CustomCursorContext";
 
 const CustomLink = styled.a`
   background-image: linear-gradient(
@@ -18,7 +17,7 @@ const CustomLink = styled.a`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
-  cursor: none;
+  cursor: pointer;
   &:before {
     content: "";
     background: ${({ theme }) => theme.accents};
@@ -40,11 +39,8 @@ const CustomLink = styled.a`
   }
 `;
 function Link({ className, href, children, blank = false }) {
-  const { setType } = useContext(CustomCursorContext);
   return (
     <CustomLink
-      onMouseEnter={() => setType("link")}
-      onMouseLeave={() => setType("default")}
       href={href}
       className={className}
       target={blank ? "_blank" : "_self"}

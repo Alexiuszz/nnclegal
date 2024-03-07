@@ -3,10 +3,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "@/styles/theme";
 import NavBar from "./navigation/nav-bar";
 import SplashScreen from "./splash-screen";
-import CustomCursor from "./CustomCursor";
 import { GlobalStyles } from "@/styles/globalStyles";
 import Footer from "./footer/footer";
-import RoomSearch from "./room-search/room-search";
 
 const LayoutContainer = styled.main`
   overflow-y: scroll;
@@ -23,45 +21,12 @@ const LayoutContainer = styled.main`
     max-width: 1920px;
   }
 `;
-function MainLayout({
-  onClick = () => {},
-  splash,
-  roomSearch = true,
-  children,
-}) {
-  const [openCalender, setOpenCalender] = useState(false);
-  const [openGuestsNumber, setOpenGuestsNumber] = useState(false);
+function MainLayout({ onClick = () => {}, splash, children }) {
   return (
     <ThemeProvider theme={darkTheme}>
-      <CustomCursor />
       <GlobalStyles />
-      <LayoutContainer
-        className="main-layout"
-        onClick={
-          openCalender || openGuestsNumber
-            ? () => {
-                setOpenCalender(false);
-                onClick();
-                setOpenGuestsNumber(false);
-              }
-            : () => {
-                onClick();
-              }
-        }
-      >
+      <LayoutContainer className="main-layout" onClick={onClick}>
         <NavBar />
-        {roomSearch && (
-          <RoomSearch
-            openCalender={openCalender}
-            openGuestsNumber={openGuestsNumber}
-            setOpenCalender={() =>
-              setOpenCalender((prevState) => !prevState)
-            }
-            setOpenGuestsNumber={() =>
-              setOpenGuestsNumber((prevState) => !prevState)
-            }
-          />
-        )}
         {splash && <SplashScreen />}
         <div className="layout-content">
           {children}
