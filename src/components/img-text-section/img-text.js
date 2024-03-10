@@ -6,14 +6,18 @@ import { useInView } from "framer-motion";
 import LinkButton from "@/components/LinkButton";
 import { useStagger } from "@/hooks/useStagger";
 
-
-export const ImgText = (staggerName, textHeader, text, btns) => {
+export const ImgText = ({
+  staggerName,
+  textHeader,
+  text,
+  btns,
+  imgUrl,
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const scope = useStagger(isInView, staggerName);
   return (
     <ImgTextContainer>
-      <div className="events-section" ref={scope}>
+      <div className="events-section">
         <div className="events-section-info">
           <SectionHeader
             size="25px"
@@ -40,15 +44,13 @@ export const ImgText = (staggerName, textHeader, text, btns) => {
           )}
         </div>
         <div className="events-section-media">
-          <div className="events-section-media-bg events-stagger">
+          <div className={`events-section-media-bg ${staggerName}`}>
             <Image
               height={450}
               width={500}
               loading="lazy"
-              src={
-                "https://the-pearl.s3.amazonaws.com/imgs/sroom/sroom-1.jpg"
-              }
-              alt="room-image"
+              src={imgUrl}
+              alt={textHeader}
             />
           </div>
         </div>
