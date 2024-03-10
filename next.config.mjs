@@ -12,6 +12,12 @@ const nextConfig = {
         port: "",
         pathname: "/images/**",
       },
+      {
+        protocol: "https",
+        hostname: "nnclegal.org",
+        port: "",
+        pathname: "/wp-content/uploads/**",
+      },
     ],
   },
 };

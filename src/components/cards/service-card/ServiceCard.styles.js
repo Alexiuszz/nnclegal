@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { centerContent } from "../../../styles/style_mixins";
 
-export const StyledServiceCard = styled.a`
+export const StyledServiceCard = styled.div`
   ${centerContent}
   flex-direction: column;
   width: 224px;
@@ -13,9 +13,10 @@ export const StyledServiceCard = styled.a`
   user-select: none;
   margin: 10px -10px;
   transform: scale(0.8);
+  color: ${({ theme }) => theme.primaryColor};
   border-radius: 5px;
   cursor: pointer;
-  && > h1 {
+  && > h2 {
     font-size: 16px;
     font-weight: 500;
     margin-top: 30px;

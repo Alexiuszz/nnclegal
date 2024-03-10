@@ -85,9 +85,7 @@ const IconSection = () => {
 const Newsletter = () => {
   return (
     <NewsletterContainer>
-      <SectionHeader size="25px">
-        Join our <span style={{ color: "#eaca12" }}>NewsLetter</span>
-      </SectionHeader>
+      <SectionHeader size="25px">Join our NewsLetter</SectionHeader>
       <div className="input">
         <TextInput placeholder="Email" />
         <Button>Submit</Button>

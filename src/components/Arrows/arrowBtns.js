@@ -5,8 +5,9 @@ const Arrow = styled.button`
   width: max-content;
   cursor: pointer;
   border: none;
-  background-color: ${({ theme }) => theme.primaryColor};
-  color: ${({ theme }) => theme.primaryFontColor};
+  background-color: #fff;
+  color: ${(props) =>
+    props.disabled ? props.theme.primaryFontColor : props.theme.primaryColor};
 `;
 
 export const StyledLeftArrow = styled(Arrow)`

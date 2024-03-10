@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ImgTextContainer = styled.div`
-  background-color: ${({ theme }) => theme.primaryColor};
+  background-color: ${({ theme }) => theme.primaryFontColor};
   width: 100%;
   padding: 60px 50px;
   padding-bottom: 20px;
-  color: ${({ theme }) => theme.tetiaryColor};
+  color: ${({ theme }) => theme.primaryColor};
   .events-section {
     display: flex;
     .events-section-media {
@@ -41,7 +41,7 @@ export const ImgTextContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 980px) {
     padding: 50px 20px;
     h2 {
       font-size: 25px;
@@ -51,30 +51,6 @@ export const ImgTextContainer = styled.div`
       .events-section-info {
         padding: 0px;
         margin-top: 20px;
-      }
-      &-media {
-        &-bg {
-          div {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 880px) {
-    padding: 50px 20px;
-    h2 {
-      font-size: 20px;
-      white-space: nowrap;
-    }
-    .events-section {
-      flex-direction: column-reverse;
-      .events-section-info {
-        h2 {
-          font-size: 18px;
-          white-space: normal;
-          margin-bottom: 10px;
-        }
       }
       &-media {
         &-bg {

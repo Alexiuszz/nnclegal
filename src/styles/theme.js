@@ -4,7 +4,7 @@ export const darkTheme = {
   tetiaryColor: "#f0f5ff",
   primaryFontColor: "#eef2ff",
   secondaryFontColor: "#333a45",
-  tetiaryFontColor: "#727677",
+  tetiaryFontColor: "#737277",
   hoverFontColor: "#9a84ff",
   cursorColor: "#4b80a1",
   accents: "#f2eeff",

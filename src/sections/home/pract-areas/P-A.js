@@ -1,6 +1,6 @@
 import React from "react";
 import Slide from "../../../components/PA Slide/PA_Slide";
-import { Header, Text } from "../../../components/typography.styles";
+import { Header, Text } from "@/components/typography";
 
 function Pract_Areas() {
   return (

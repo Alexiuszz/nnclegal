@@ -14,7 +14,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const CopyrightsSectionContainer = styled.div`
-  background-color: ${({ theme }) => theme.secondaryColor};
+  background-color: ${({ theme }) => theme.primaryFontColor};
 `;
 
 export const IconSectionContainer = styled.div`
