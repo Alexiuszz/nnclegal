@@ -16,7 +16,7 @@ export const NavBarContainer = styled.div`
       : "linear-gradient(180deg,#000000b2,transparent)"};
   align-content: end;
   padding: 0 5%;
-  font-size: 16px;
+  font-size: 14px;
   -webkit-box-pack: justify;
   z-index: 3;
   backdrop-filter: ${({ $isTop }) =>
@@ -32,11 +32,11 @@ export const NavBarContainer = styled.div`
     }
   }
   .navLinks {
-    margin: 0px 5px;
+    margin: 0px 3px;
     padding: 10px;
     .navIndex {
       svg {
-        height: 12px;
+        height: 10px;
       }
       margin-right: 5px;
       color: ${({ theme }) => theme.accents};
