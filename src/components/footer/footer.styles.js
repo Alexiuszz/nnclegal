@@ -25,7 +25,7 @@ export const IconSectionContainer = styled.div`
   justify-content: space-between;
   .logo {
     height: 100%;
-    width: 200px;
+    width: 250px;
     ${centerContent};
     flex-direction: column;
   }

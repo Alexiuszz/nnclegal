@@ -38,21 +38,20 @@ const IconSection = () => {
       <CustomLink className="logo" href="/">
         <Image
           height={120}
-          width={100}
+          width={180}
           loading="eager"
           src={Logo}
           alt="logo"
           priority
         />
-        <SectionHeader size="18px">The Pearl Jabi Lake</SectionHeader>
+        <SectionHeader size="18px">Nwachukwu Nwachukwu & Co</SectionHeader>
       </CustomLink>
       <div className="links">
         <div className="columns">
-          <CustomLink href="/rooms">Rooms and Suites</CustomLink>
-          <CustomLink href="/events">Events</CustomLink>
+          <CustomLink href="/">Home</CustomLink>
+          <CustomLink href="/about-us">About us</CustomLink>
           <CustomLink href="/gallery">Gallery</CustomLink>
-          <CustomLink href="/dining">Restaurants and Bar</CustomLink>
-          <CustomLink href="/offers">Special Offers</CustomLink>
+          <CustomLink href="/insights">Insights</CustomLink>
         </div>
         <div className="columns">
           <CustomLink href="/contact">Contact Us</CustomLink>
@@ -85,7 +84,7 @@ const IconSection = () => {
 const Newsletter = () => {
   return (
     <NewsletterContainer>
-      <SectionHeader size="25px">Join our NewsLetter</SectionHeader>
+      <SectionHeader size="25px">Subscribe to our NewsLetter</SectionHeader>
       <div className="input">
         <TextInput placeholder="Email" />
         <Button>Submit</Button>

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import MainLayout from "@/components/layout";
 import SimpleHero from "@/components/simple-hero/simple-hero";
 import ImgText from "@/components/img-text-section/img-text";

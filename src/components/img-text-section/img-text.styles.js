@@ -8,7 +8,9 @@ export const ImgTextContainer = styled.div`
   color: ${({ theme }) => theme.primaryColor};
   .events-section {
     display: flex;
-    .events-section-media {
+    flex-direction: ${({ $reverse }) =>
+        $reverse ? "row-reverse" : "row"};
+      .events-section-media {
       position: relative;
       &-bg {
         border-radius: 20px;

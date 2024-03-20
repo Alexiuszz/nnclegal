@@ -11,12 +11,13 @@ export const ImgText = ({
   textHeader,
   text,
   btns,
+  reverse,
   imgUrl,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <ImgTextContainer>
+    <ImgTextContainer $reverse={reverse}>
       <div className="events-section">
         <div className="events-section-info">
           <SectionHeader
