@@ -21,7 +21,7 @@ export const Header = styled.h2.attrs((props) => ({
 }))`
   text-align: ${(props) => props.center || "left"};
   font-weight: ${(props) => props.weight || "300"};
-  font-size: ${(props) => props.size || "55px"};
+  font-size: ${(props) => props.size || "45px"};
   color: ${(props) => props.color || "inherit"};
   margin-bottom: ${(props) => props.bottom || "0"};
   margin-top: ${(props) => props.top || "0"};
